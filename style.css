@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Varela+Round&display=swap');
+*{
+    font-family: 'Varela Round', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+h1 {
+    font-size: 4rem;
+    background-color: #9C0A00;
+    height: 20vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+    font-family: 'Merriweather', serif;
+    font-style: oblique;
+    /* text-shadow: 13px 13px 2px rgba(150, 150, 150, 0.2); */
+}
+  
+#principal-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.card {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    border-radius: 10px;
+    border: #9C0A00 outset 5px;
+    margin: 0.5rem;
+}
+  
+.card img {
+    width: 50%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 10px;
+    border: #9C0A00 groove 5px;
+    filter: opacity(80%);
+}
+  
+h2 {
+    margin-top: 5%;
+    font-size: 1.5rem;
+    color: #020a24;
+    text-align: center;
+}
+  
+button {
+    width: 50%;
+    height: 2rem;
+    border-radius: 10px;
+    background: #9C0A00;
+    border:0px;
+    color: #fff;  
+    cursor: pointer;  
+    margin-top: 2rem;
+    outline: 2px solid #9C0A00;
+    outline-offset:2px;
+}
+  
+button:hover{
+    background: goldenrod;
+    color: #000;
+    font-weight: bold;
+    outline: 2px solid black;
+    outline-offset:2px;
+}
+button:focus {
+    background: goldenrod;
+    color: #000;
+    font-weight: bold;
+    outline: 2px solid black;
+    outline-offset:2px;
+}
+
+/* .count{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 15vh;
+    justify-content: space-around;
+    background-color: goldenrod;
+}
+
+#btn_generate{
+    background: #015c06;
+    color: #9be4f1;  
+    border-radius: 10px; 
+    height: 2rem; 
+    width: 5%;
+} */
+  
