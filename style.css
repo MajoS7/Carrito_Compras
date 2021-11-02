@@ -4,18 +4,19 @@
     padding: 0px;
     margin: 0px;
 }
-h1 {
-    font-size: 4rem;
+header{
     background-color: #9C0A00;
-    height: 20vh;
-    color: #fff;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2vh;
+    flex-direction: column;
+}
+h1 {
+    font-size: 4rem;
+    color: #fff;
     font-family: 'Merriweather', serif;
     font-style: oblique;
-    /* text-shadow: 13px 13px 2px rgba(150, 150, 150, 0.2); */
 }
   
 #principal-container {
