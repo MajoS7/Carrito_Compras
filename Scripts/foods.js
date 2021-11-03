@@ -1,12 +1,12 @@
 let foods = [
-    {id:1,name: 'arroz chino', img: 'images/arrozchino.jpg'},
-    {id:2,name: 'bandeja Paisa', img: 'images/bandejaPaisa.jpg'},
-    {id:3,name: 'comida Oso', img: 'images/comidaOso.jpg'},
-    {id:4,name: 'donas', img: 'images/donas.jpg'},
-    {id:5,name: 'ensalada', img: 'images/ensalada.jpg'},
-    {id:6,name: 'pasta', img: 'images/pasta.jpg'},
-    {id:7,name: 'rollitos', img: 'images/rollitos.jpg'},
-    {id:8,name: 'sushi', img: 'images/sushi.jpg'},
-    {id:9,name: 'tacos', img: 'images/tacos.jpg'},
-    {id:10,name: 'tortilla Española', img: 'images/tortillaEspanola.jpg'}
+    {id:1,name: 'Arroz Chino', img: 'images/arrozchino.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:2,name: 'Bandeja Paisa', img: 'images/bandejaPaisa.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:3,name: 'Comida Oso', img: 'images/comidaOso.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:4,name: 'Donas', img: 'images/donas.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:5,name: 'Ensalada', img: 'images/ensalada.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:6,name: 'Pasta', img: 'images/pasta.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:7,name: 'Rollitos', img: 'images/rollitos.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:8,name: 'Sushi', img: 'images/sushi.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:9,name: 'Tacos', img: 'images/tacos.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'},
+    {id:10,name: 'Tortilla Española', img: 'images/tortillaEspanola.jpg', descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.', price: '$20.000'}
   ];
