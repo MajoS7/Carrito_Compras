@@ -5,20 +5,58 @@
     margin: 0px;
 }
 header{
-    background-color: #9C0A00;
-    height: 30vh;
+    background-color: #f4f4f4;
+    height: 15vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 0% 5%;
 }
 h1 {
-    font-size: 4rem;
-    color: #fff;
+    font-size: 3rem;
+    color: #9C0A00;
     font-family: 'Merriweather', serif;
     font-style: oblique;
 }
-  
+
+.logotype{
+    display: flex;
+    width: 22%;
+    justify-content: space-between;
+    font-size: 3rem;
+    align-items: center;
+}
+
+.icons{
+    font-size: 2rem;
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.menu{
+    font-size: 2.5rem;
+    color: #9C0A00;
+    padding: 1% 0%;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+}
+
 #principal-container {
     width: 100%;
     height: 100%;
@@ -28,75 +66,57 @@ h1 {
     flex-wrap: wrap;
 }
   
-.card {
-    width: 20rem;
-    height: 20rem;
+.card{
+    width: 34rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 2%;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 0.7rem;
+}
+
+.cardContent{
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    border-radius: 10px;
-    border: #9C0A00 outset 5px;
-    margin: 0.5rem;
+    align-items: center;
+    width: 40%;
+    height: 13rem;
+    justify-content: space-evenly;
+}
+
+.price{
+    color: #9C0A00;
+    font-size: 1.3rem;
+    text-align: start;
+    width: 100%;
 }
   
 .card img {
     width: 50%;
     height: 10rem;
     object-fit: cover;
-    border-radius: 10px;
-    border: #9C0A00 groove 5px;
-    filter: opacity(80%);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
   
-h2 {
-    margin-top: 5%;
-    font-size: 1.5rem;
-    color: #020a24;
-    text-align: center;
-}
+
   
 button {
     width: 50%;
     height: 2rem;
-    border-radius: 10px;
     background: #9C0A00;
     border:0px;
     color: #fff;  
     cursor: pointer;  
-    margin-top: 2rem;
-    outline: 2px solid #9C0A00;
-    outline-offset:2px;
 }
   
 button:hover{
-    background: goldenrod;
-    color: #000;
-    font-weight: bold;
-    outline: 2px solid black;
-    outline-offset:2px;
-}
-button:focus {
-    background: goldenrod;
+    background: #f4f4f4;
     color: #000;
     font-weight: bold;
     outline: 2px solid black;
     outline-offset:2px;
 }
 
-/* .count{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 15vh;
-    justify-content: space-around;
-    background-color: goldenrod;
-}
 
-#btn_generate{
-    background: #015c06;
-    color: #9be4f1;  
-    border-radius: 10px; 
-    height: 2rem; 
-    width: 5%;
-} */
-  
