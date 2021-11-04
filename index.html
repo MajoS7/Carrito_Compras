@@ -17,15 +17,26 @@
     </div>
     <div class="icons">
       <i class="fas fa-plus-circle"></i>
-      <i class="icono fas fa-shopping-cart"></i>
+      <i class="icono fas fa-shopping-cart" id="products"></i>
     </div>
   </header>
   
   <main>
     <h2 class="menu">Menu</h2>
-  <div id="principal-container"> 
+  <div id="principal-container"  class="principal-container"> 
   </div>
   </main>
+  <div class="overlay " id="overlay" >
+    <div class="popup" id="popup">
+       <a href="#" id="btn-close-popup" class="btn-close-popup"><i class="fas fa-times"></i></a>
+       <div class="shoppingCart">
+          <i class="icono fas fa-shopping-cart"></i>
+          <h3>Carrito</h3>
+        </div>
+       <div class="principal-container shoppingCart-container" >
+       </div>
+    </div>
+  </div>
 
   <script src="Scripts/foods.js"></script>
   <script src="Scripts/app.js"></script> 

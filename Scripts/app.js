@@ -1,5 +1,9 @@
 const main = document.querySelector('#principal-container');
 const btn_generate =document.querySelector('#btn_generate');
+const shopping_card = document.querySelector('#products');
+const overlay = document.querySelector("#overlay");
+const popup= document.querySelector("#popup");
+const btn_close_popup = document.querySelector("#btn-close-popup");
 
 
 create_Cards();
@@ -37,6 +41,22 @@ function create_Cards() {
     main.appendChild(card);
   }); 
 }
+
+shopping_card.addEventListener('click', show_cart)
+
+
+function show_cart(){
+  overlay.classList.add('activate');
+  popup.classList.add('activate');
+}
+
+btn_close_popup.addEventListener('click', close_cart)
+
+function close_cart(){
+  overlay.classList.remove('activate');
+  popup.classList.remove('activate');
+}
+
 
 
 
