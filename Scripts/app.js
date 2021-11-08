@@ -5,7 +5,7 @@ const overlay = document.querySelector("#overlay");
 const popup= document.querySelector("#popup");
 const btn_close_popup = document.querySelector("#btn-close-popup");
 const shoppingCart_container= document.querySelector(".shoppingCart-container");
-
+const totel =document.querySelector('#total');
 food_cart=[];
 
 
@@ -43,8 +43,6 @@ function create_Cards() {
     card_content.appendChild(button_card);
     main.appendChild(card);
 
-    
-
   }); 
 }
 
@@ -65,70 +63,115 @@ function close_cart(){
   popup.classList.remove('activate');
 }
 
+const subtract_food = (event) => {
+  let item = event.target.getAttribute('id') 
+  food_cart.splice(parseInt(food_cart.indexOf(item)),1)
+  show_food_cart();
+}
+
 
 
 const show_food_cart = () => {
-  // shoppingCart_container.innerHTML = '';
+  shoppingCart_container.innerHTML = '';
   let lista = [...new Set(food_cart)]; 
   
   lista.forEach(item => {
+
       const todos_productos = foods.filter(foods => {
           return foods.id === parseInt(item);
       })
-      console.log(todos_productos);
-      console.log(todos_productos[0].name);
+      let cont = 0;
+      let total=0;
       
-      const nombre = document.createElement('p');
-      nombre.textContent=todos_productos[0].name;
+      
 
-      shoppingCart_container.appendChild(nombre);
+      for(let id of food_cart) {
+          if(id === item) {
+            cont++;
+            total=total+parseInt(todos_productos[0].price);
+            todos_productos[0].totalv=total;
+          }
+          
+      }
+      let sumatoria=0;
+      foods.forEach((food) => {
+        sumatoria=sumatoria+food.totalv;
+      })
+      
+
+      
+      
+      
+      
+      const card = document.createElement('div');
+      const imagen = document.createElement('img');
+      const cardContent = document.createElement('div');
+      // const deletec = document.createElement('p');
+      const title_card=document.createElement('h2');
+      const info=document.createElement('p');
+      const containerQuantityNumber= document.createElement('div');
+      const quantity =document.createElement('h4');
+      const quantityNumber=document.createElement('div');
+      const sum =document.createElement('p');
+      const number=document.createElement('p');
+      const subtract=document.createElement('p');
+      const pricecart=document.createElement('p');
+
+      sum.setAttribute('id', todos_productos[0].id);
+      subtract.setAttribute('id',todos_productos[0].id);
 
 
-      // let cont = 0;
+      card.classList.add('card');
+      cardContent.classList.add('cardContent');
+      // deletec.classList.add('delete');
+      containerQuantityNumber.classList.add('quantityNumber');
+      quantity.style.fontStyle='oblique';
+      quantityNumber.classList.add('numberQuantity');
+      sum.classList.add('circle');
+      subtract.classList.add('circle');
+      pricecart.classList.add('price');
 
-      // for(let id of food_cart) {
-      //     if(id === item) {
-      //         cont++;
-      //     }
-      // }
+      // deletec.textContent='X';
+      imagen.src=todos_productos[0].img;
+      title_card.textContent=todos_productos[0].name;
+      info.textContent=todos_productos[0].descrip;
+      quantity.textContent='Cantidad';
+      sum.textContent='+';
+      number.textContent=cont;
+      subtract.textContent='-';
+      pricecart.textContent=total;
+      // totel.textContent=sumatoria;
+
+      // card.appendChild(deletec);
+      card.appendChild(imagen);
+      cardContent.appendChild(title_card);
+      cardContent.appendChild(info);
+      cardContent.appendChild(containerQuantityNumber);
+      containerQuantityNumber.appendChild(quantity);
+      containerQuantityNumber.appendChild(quantityNumber);
+      quantityNumber.appendChild(subtract);
+      quantityNumber.appendChild(number);
+      quantityNumber.appendChild(sum);
+      cardContent.appendChild(pricecart);
+      card.appendChild(cardContent);
+      // card.appendChild(totel);
 
 
-     
-      // const card_producto_cart = document.createElement('div');
-      // const name = document.createElement('p');
-      // const price = document.createElement('p');
-      // const contador = document.createElement('p');
-      // const btn_suma = document.createElement('button');
-      // const btn_resta = document.createElement('button');
-      // const btn_eliminar = document.createElement('button');
+      sum.addEventListener('click', add_cart);
+      subtract.addEventListener('click', subtract_food);
 
-      // btn_suma.setAttribute('id', todos_productos[0].id);
-      // btn_resta.setAttribute('id',todos_productos[0].id);
-      // btn_eliminar.setAttribute('id',todos_productos[0].id);
 
-      // name.textContent = todos_productos[0].name;
-      // price.textContent = todos_productos[0].descrip;
-      // btn_suma.textContent = '+';
-      // btn_resta.textContent = '-'
-      // btn_eliminar.textContent = 'X';
-      // contador.textContent = cont;
 
-      // card_producto_cart.classList.add('card_producto')
-      // card_producto_cart.appendChild(name);
-      // card_producto_cart.appendChild(price);
-      // card_producto_cart.appendChild(contador)
-      // card_producto_cart.appendChild(btn_suma);
-      // card_producto_cart.appendChild(btn_resta);
-      // card_producto_cart.appendChild(btn_eliminar);
+      shoppingCart_container.appendChild(card);
 
-      // btn_suma.addEventListener('click', agregarCarrito);
-      // btn_resta.addEventListener('click', restarProducto);
-      // btn_eliminar.addEventListener('click', eliminarProducto)
-      // shoppingCart_container.appendChild(card_producto_cart);
-
+      
+      /////btn_eliminar.setAttribute('id',todos_productos[0].id);
+      ///// btn_eliminar.addEventListener('click', eliminarProducto)
         
   })
 }
+
+
 
 
 

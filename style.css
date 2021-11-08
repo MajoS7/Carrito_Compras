@@ -134,7 +134,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* visibility: hidden;  */
+    visibility: hidden;
 }
 
 .activate{
@@ -155,8 +155,8 @@ button:hover{
     height: 88%;
     width: 50%;
 
-    /* opacity: 0; 
-    transform: scale(0); */
+    opacity: 0; 
+    transform: scale(0);
     transition: .4s ease all;
 }
 h3{
@@ -186,6 +186,11 @@ h3{
     align-items: baseline;
 }
 
+.information{
+    font-style: oblique;
+    font-weight: bold;
+    
+}
 
 
 /*animaciones*/
@@ -236,4 +241,15 @@ h3{
     border-radius: 100px;
 }
 
+/* .delete{
+    background: #9C0A00;
+    color: #fff;
+    width: 50px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+} */
 
