@@ -274,3 +274,12 @@ h3{
 
 }
 
+footer{
+    margin-top: 2vh;
+    background-color: #f4f4f4;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 5%;
+}
