@@ -69,6 +69,16 @@ const subtract_food = (event) => {
   show_food_cart();
 }
 
+const delete_cart = (event) => {
+  let item = event.target.getAttribute('id');
+  
+  food_cart = food_cart.filter((id_food) => {
+    return id_food !== item;
+  });
+
+  show_food_cart();
+}
+
 
 
 const show_food_cart = () => {
@@ -89,14 +99,10 @@ const show_food_cart = () => {
           if(id === item) {
             cont++;
             total=total+parseInt(todos_productos[0].price);
-            todos_productos[0].totalv=total;
           }
           
       }
-      let sumatoria=0;
-      foods.forEach((food) => {
-        sumatoria=sumatoria+food.totalv;
-      })
+      
       
 
       
@@ -106,7 +112,7 @@ const show_food_cart = () => {
       const card = document.createElement('div');
       const imagen = document.createElement('img');
       const cardContent = document.createElement('div');
-      // const deletec = document.createElement('p');
+      const deletec = document.createElement('p');
       const title_card=document.createElement('h2');
       const info=document.createElement('p');
       const containerQuantityNumber= document.createElement('div');
@@ -123,7 +129,7 @@ const show_food_cart = () => {
 
       card.classList.add('card');
       cardContent.classList.add('cardContent');
-      // deletec.classList.add('delete');
+      deletec.classList.add('delete');
       containerQuantityNumber.classList.add('quantityNumber');
       quantity.style.fontStyle='oblique';
       quantityNumber.classList.add('numberQuantity');
@@ -131,7 +137,7 @@ const show_food_cart = () => {
       subtract.classList.add('circle');
       pricecart.classList.add('price');
 
-      // deletec.textContent='X';
+      deletec.textContent='X';
       imagen.src=todos_productos[0].img;
       title_card.textContent=todos_productos[0].name;
       info.textContent=todos_productos[0].descrip;
@@ -140,9 +146,9 @@ const show_food_cart = () => {
       number.textContent=cont;
       subtract.textContent='-';
       pricecart.textContent=total;
-      // totel.textContent=sumatoria;
 
-      // card.appendChild(deletec);
+
+
       card.appendChild(imagen);
       cardContent.appendChild(title_card);
       cardContent.appendChild(info);
@@ -153,8 +159,9 @@ const show_food_cart = () => {
       quantityNumber.appendChild(number);
       quantityNumber.appendChild(sum);
       cardContent.appendChild(pricecart);
+      card.appendChild(deletec);
       card.appendChild(cardContent);
-      // card.appendChild(totel);
+
 
 
       sum.addEventListener('click', add_cart);
@@ -165,8 +172,8 @@ const show_food_cart = () => {
       shoppingCart_container.appendChild(card);
 
       
-      /////btn_eliminar.setAttribute('id',todos_productos[0].id);
-      ///// btn_eliminar.addEventListener('click', eliminarProducto)
+      deletec.setAttribute('id',todos_productos[0].id);
+      deletec.addEventListener('click', delete_cart)
         
   })
 }

@@ -29,11 +29,7 @@ h1 {
 
 .icons{
     font-size: 2rem;
-    width: 8%;
-    display: flex;
-    justify-content: space-between;
     cursor: pointer;
-    
 }
 
 
@@ -86,6 +82,8 @@ h2 {
     width: 40%;
     height: 13rem;
     justify-content: space-evenly;
+    
+    
 }
 
 .price{
@@ -96,7 +94,7 @@ h2 {
 }
   
 .card img {
-    width: 50%;
+    width: 45%;
     height: 10rem;
     object-fit: cover;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
@@ -134,7 +132,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    visibility: hidden; 
 }
 
 .activate{
@@ -239,17 +237,40 @@ h3{
     width: 20%;
     text-align: center;
     border-radius: 100px;
+    cursor: pointer;
 }
 
-/* .delete{
+.circle:hover{
+    background: #f4f4f4;
+    color: #000;
+    border: #000 2px solid;
+    font-weight: bold;
+
+}
+
+.delete{
+    order: 1;
+    align-self: flex-start;
     background: #9C0A00;
     color: #fff;
-    width: 50px;
-    height: 20px;
+    width: 33px;
+    height: 33px;
     display: flex;
-    position: relative;
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-} */
+    position: relative;
+    left: 21px;
+    bottom: 9px;
+    font-weight: bold;
+    cursor: pointer;
+} 
+
+.delete:hover{
+    background: #f4f4f4;
+    color: #000;
+    border: #000 2px solid;
+    
+
+}
 
