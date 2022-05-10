@@ -19,8 +19,6 @@ function create_Cards() {
     const price = document.createElement('p');
     const button_card = document.createElement('button');
 
-    
-
     title_card.style.marginBottom='2vh';                                                                                     
     button_card.textContent = 'Add';
     title_card.textContent = food.name;
@@ -34,7 +32,6 @@ function create_Cards() {
     button_card.setAttribute('id', food.id);  
     button_card.addEventListener('click', add_cart);
 
-    
     card.appendChild(image_food);
     card.appendChild(card_content);
     card_content.appendChild(title_card);
@@ -92,8 +89,6 @@ const show_food_cart = () => {
       })
       let cont = 0;
       let total=0;
-      
-      
 
       for(let id of food_cart) {
           if(id === item) {
@@ -102,13 +97,7 @@ const show_food_cart = () => {
           }
           
       }
-      
-      
-
-      
-      
-      
-      
+  
       const card = document.createElement('div');
       const imagen = document.createElement('img');
       const cardContent = document.createElement('div');
@@ -125,7 +114,6 @@ const show_food_cart = () => {
 
       sum.setAttribute('id', todos_productos[0].id);
       subtract.setAttribute('id',todos_productos[0].id);
-
 
       card.classList.add('card');
       cardContent.classList.add('cardContent');
@@ -147,8 +135,6 @@ const show_food_cart = () => {
       subtract.textContent='-';
       pricecart.textContent=total;
 
-
-
       card.appendChild(imagen);
       cardContent.appendChild(title_card);
       cardContent.appendChild(info);
@@ -162,25 +148,15 @@ const show_food_cart = () => {
       card.appendChild(deletec);
       card.appendChild(cardContent);
 
-
-
       sum.addEventListener('click', add_cart);
       subtract.addEventListener('click', subtract_food);
 
-
-
       shoppingCart_container.appendChild(card);
 
-      
       deletec.setAttribute('id',todos_productos[0].id);
       deletec.addEventListener('click', delete_cart)
-        
   })
 }
-
-
-
-
 
 const add_cart = (event) => {
   food_cart.push(event.target.getAttribute('id'));
